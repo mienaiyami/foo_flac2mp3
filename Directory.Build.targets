@@ -1,0 +1,9 @@
+<Project>
+  <!-- Auto-imported by MSBuild for every project below this folder (the component and the SDK projects).
+       Adds the WTL headers (NuGet package "wtl", extracted to sdk\wtl) that libPPUI and the SDK helpers need. -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)sdk\wtl\lib\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+</Project>

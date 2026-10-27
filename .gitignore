@@ -1,0 +1,13 @@
+# Third-party: foobar2000 SDK and WTL headers, downloaded separately (see FOOBAR-COMPONENT.md > Rebuild)
+/sdk/
+
+# Visual Studio / MSBuild output
+x64/
+Win32/
+ARM64/
+ARM64EC/
+Debug/
+Release/
+.vs/
+*.user
+*.aps

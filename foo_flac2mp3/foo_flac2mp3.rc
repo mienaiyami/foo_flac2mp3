@@ -1,0 +1,29 @@
+#include "resource.h"
+#include "winres.h"
+
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+
+// Preferences > Tools > FLAC to MP3. Kept under ~285 DLU wide so it fits foobar2000's preferences pane.
+IDD_PREFERENCES DIALOGEX 0, 0, 285, 200
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Conversion",IDC_STATIC,7,7,271,76
+    CONTROL         "Overwrite existing MP3 files",IDC_OVERWRITE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,20,200,10
+    LTEXT           "Parallel conversions:",IDC_STATIC,15,37,70,8
+    EDITTEXT        IDC_THREADS,88,35,30,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "0 = one per CPU core",IDC_STATIC,124,37,120,8
+    LTEXT           "lame.exe:",IDC_STATIC,15,55,34,8
+    EDITTEXT        IDC_LAME_PATH,52,53,166,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_LAME_BROWSE,222,52,50,14
+    LTEXT           "Empty = search PATH, then the foobar2000\\encoders folder.",IDC_STATIC,52,69,220,8
+
+    GROUPBOX        "After a successful conversion",IDC_STATIC,7,90,271,102
+    CONTROL         "Delete the source FLAC (moves it to the Recycle Bin)",IDC_DELETE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,103,255,10
+    CONTROL         "Replace FLAC with MP3 in foobar2000 playlists",IDC_FB_PLAYLISTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,117,243,10
+    CONTROL         "Replace FLAC with MP3 in .m3u / .m3u8 files under:",IDC_M3U,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,131,243,10
+    EDITTEXT        IDC_MAIN_FOLDER,39,144,179,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_MAIN_BROWSE,222,143,50,14
+    CONTROL         "Keep a .bak copy of each changed playlist file",IDC_KEEP_BAK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,161,231,10
+    LTEXT           "Subfolders whose name starts with a dot are skipped.",IDC_STATIC,39,176,231,8
+END
